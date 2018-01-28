@@ -140,3 +140,9 @@ cloudkitty_collector: gnocchi
 cloudkitty_output_backend: cloudkitty.backend.file.FileBackend
 cloudkitty_output_pipeline: osrf
 cloudkitty_output_basepath: /var/cloudkitty/reports
+
+
+cloudkitty_api_paste_ini_download_url: https://github.com/openstack/cloudkitty/blob/master/etc/cloudkitty/api_paste.ini
+cloudkitty_metrics_yml_download_url: https://github.com/openstack/cloudkitty/blob/master/etc/cloudkitty/metrics.yml
+
+

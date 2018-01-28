@@ -12,6 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+- name: Download api-paste.ini and metrics.yml file from the upstream cloudkitty repo
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    mode: 0440
+  with_items:
+     #- url: https://github.com/openstack/cloudkitty/blob/master/etc/cloudkitty/api_paste.ini
+     - url: "{{ cloudkitty_api_paste_ini_download_url }}"
+       dest: /etc/cloudkitty/api_paste.ini 
+     - url: "{{ cloudkitty_metrics_yml_download_url }}"
+     #- url: https://github.com/openstack/cloudkitty/blob/master/etc/cloudkitty/metrics.yml 
+       dest: /etc/cloudkitty/metrics.yml 
+
+
 - name: Copy cloudkitty config
   config_template:
     src: "{{ item.src }}"
