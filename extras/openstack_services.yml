@@ -1,4 +1,4 @@
 #Cloudkitty service
-cloudkitty_git_repo: https://git.openstack.org/openstack/cloudkitty
-cloudkitty_git_install_branch: stable/pike
+cloudkitty_git_repo: https://github.com/BhujayKumarBhatta/cloudkitty.git 
+cloudkitty_git_install_branch: 8c3ee85b32ecb6aea0833b914d4317542899c166
 cloudkitty_git_project_group: cloudkitty_all
