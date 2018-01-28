@@ -16,7 +16,9 @@
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
-    mode: 0440
+    mode: 0660
+    owner: cloudkitty
+    group: cloudkitty
   with_items:
      #- url: https://github.com/openstack/cloudkitty/blob/master/etc/cloudkitty/api_paste.ini
      - url: "{{ cloudkitty_api_paste_ini_download_url }}"
